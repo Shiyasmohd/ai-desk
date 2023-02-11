@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Inter, Poppins } from '@next/font/google'
 import styles from './page.module.css'
 import Card from './Card'
 import ChatGPTImg from '../../public/chatgpt.png'
@@ -13,17 +13,20 @@ import FlikiImg from '../../public/fliki.png'
 import FirefliesImg from '../../public/fireflies.png'
 import AnimeAIImg from '../../public/animeai.png'
 import RunwayImg from '../../public/runway.png'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs'
 
 const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin'], weight: '500' })
 
 export type AiToolsDetails = {
   name: string,
   caption: string,
   image: any,
   link: string,
+  category: "general" | "productive" | "creative"
 }
 
-export interface AiToolsCard extends AiToolsDetails{
+export interface AiToolsCard extends AiToolsDetails {
   index: number
 }
 
@@ -34,87 +37,151 @@ export default function Home() {
       name: "ChatGPT",
       caption: "Do anything you want !!!",
       image: ChatGPTImg,
-      link: "https://chat.openai.com/"
+      link: "https://chat.openai.com/",
+      category: "general"
     },
     {
       name: "Copy.ai",
       caption: "Generate content using AI.",
       image: CopyAiImg,
-      link: "https://www.copy.ai/"
+      link: "https://www.copy.ai/",
+      category: "productive"
     },
     {
       name: "Midjourney",
       caption: "Create amazing art using AI.",
       image: MidjourneyImg,
-      link: "https://midjourney.com/"
+      link: "https://midjourney.com/",
+      category: "creative"
     },
     {
       name: "Runway",
       caption: "Edit videos using AI.",
       image: RunwayImg,
-      link: "https://runwayml.com/"
+      link: "https://runwayml.com/",
+      category: "creative"
     },
     {
       name: "Soundraw",
       caption: "An AI music generator.",
       image: SoundrawImg,
-      link: "https://soundraw.io/"
+      link: "https://soundraw.io/",
+      category: "creative"
     },
     {
       name: "Tome",
       caption: "Create PPTs in no time.",
       image: TomeImg,
-      link: "https://beta.tome.app/"
+      link: "https://beta.tome.app/",
+      category: "productive"
     },
     {
       name: "Kaiber",
       caption: "Create videos using AI.",
       image: KaiberImg,
-      link: "https://www.kaiber.ai/"
+      link: "https://www.kaiber.ai/",
+      category: "creative"
     },
     {
       name: "Fliki",
       caption: "Create reels using AI.",
       image: FlikiImg,
-      link: "https://fliki.ai/"
+      link: "https://fliki.ai/",
+      category: "creative"
     },
     {
       name: "Fireflies",
       caption: "Automate your meeting notes.",
       image: FirefliesImg,
-      link: "https://fireflies.ai/"
+      link: "https://fireflies.ai/",
+      category: "productive"
     },
     {
       name: "Anime AI",
       caption: "Anime AI generator.",
       image: AnimeAIImg,
-      link: "https://www.zmo.ai/ai-anime-generator/"
+      link: "https://www.zmo.ai/ai-anime-generator/",
+      category: "creative"
     }
   ]
 
   return (
     <div className='p-6 flex flex-col items-center'>
 
-      <h1 className='header text-6xl my-6'>
+      <h1 className={`header text-6xl my-6 ${poppins.className}`}>
         AI Tools
       </h1>
 
-      <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
+
+      <Tabs defaultValue="all">
+        <div className='w-full flex justify-center'>
+          <TabsList >
+            <TabsTrigger value="all">All</TabsTrigger>
+            <TabsTrigger value="creative">Creative</TabsTrigger>
+            <TabsTrigger value="productive">Productive</TabsTrigger>
+          </TabsList>
+        </div>
+        <TabsContent value="all" className='w-full'>
+          <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
                       md:grid-cols-2 
                       lg:grid-cols-3'>
-        {
-          aiTools.map((data: AiToolsDetails, index: number)=>(
-            <Card
-              name={data.name}
-              link={data.link}
-              caption={data.caption}
-              image={data.image}
-              index={index}
-              key={index}
-            />
-          ))
-        }
-      </div>
+            {
+              aiTools.map((data: AiToolsDetails, index: number) => (
+                <Card
+                  name={data.name}
+                  link={data.link}
+                  caption={data.caption}
+                  image={data.image}
+                  category={data.category}
+                  index={index}
+                  key={index}
+                />
+              ))
+            }
+          </div>
+        </TabsContent>
+        <TabsContent value="creative">
+        <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
+                      md:grid-cols-2 
+                      lg:grid-cols-3'>
+            {
+              aiTools.filter(item=>item.category=="creative").map((data: AiToolsDetails, index: number) => (
+                <Card
+                  name={data.name}
+                  link={data.link}
+                  caption={data.caption}
+                  image={data.image}
+                  category={data.category}
+                  index={index}
+                  key={index}
+                />
+              ))
+            }
+          </div>
+        </TabsContent>
+        <TabsContent value="productive">
+        <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
+                      md:grid-cols-2 
+                      lg:grid-cols-3'>
+            {
+              aiTools.filter(item=>item.category=="productive").map((data: AiToolsDetails, index: number) => (
+                <Card
+                  name={data.name}
+                  link={data.link}
+                  caption={data.caption}
+                  image={data.image}
+                  category={data.category}
+                  index={index}
+                  key={index}
+                />
+              ))
+            }
+          </div>
+        </TabsContent>
+      </Tabs>
+
+
+
     </div>
   )
 }
