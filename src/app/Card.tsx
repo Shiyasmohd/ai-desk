@@ -2,8 +2,13 @@ import Image from "next/image";
 import { AiToolsCard } from "./page";
 import Link from "next/link";
 import Section from "./Animate";
+import { Inter,Montserrat } from "@next/font/google";
+
+const montserrat = Montserrat({ subsets: ['latin'] })
 
 export default function Card(props: AiToolsCard) {
+
+
 
     return (
         <Section translate="translateY(10px)" duration={((props.index * 0.075   ) + 0.5).toString() + "s"}>
@@ -17,15 +22,15 @@ export default function Card(props: AiToolsCard) {
 
                     {/* Name + Links */}
                     <div className="w-full
-                            md:flex md:justify-between md:mb-3">
-                        <h4 className="my-2 text-white text-lg tracking-wide font-txt font-medium">
+                            md:flex md:justify-between md:mb-1">
+                        <h4 className={`my-2 text-white text-lg tracking-wide font-txt font-medium ${montserrat.className}`}>
                             {props.name}
                         </h4>
                     </div>
 
 
                     {/* Tagline */}
-                    <p className="font-txt text-white mb-3 tracking-wide">
+                    <p className={`font-txt text-white mb-3 tracking-wide ${montserrat.className}`}>
                         {props.caption}
                     </p>
 
