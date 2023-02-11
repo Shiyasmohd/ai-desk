@@ -37,7 +37,7 @@ export default function Home() {
       link: "https://chat.openai.com/"
     },
     {
-      name: "copy.ai",
+      name: "Copy.ai",
       caption: "Generate content using AI.",
       image: CopyAiImg,
       link: "https://www.copy.ai/"
