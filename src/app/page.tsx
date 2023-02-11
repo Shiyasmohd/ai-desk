@@ -13,10 +13,13 @@ import FlikiImg from '../../public/fliki.png'
 import FirefliesImg from '../../public/fireflies.png'
 import AnimeAIImg from '../../public/animeai.png'
 import RunwayImg from '../../public/runway.png'
+import NamelixImg from '../../public/namelix.png'
+import LookaImg from '../../public/looka.png'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs'
+import Footer from './footer'
 
 const inter = Inter({ subsets: ['latin'] })
-const poppins = Poppins({ subsets: ['latin'], weight: '500' })
+const poppins = Poppins({ subsets: ['latin'], weight: ['500','300'], })
 
 export type AiToolsDetails = {
   name: string,
@@ -76,6 +79,20 @@ export default function Home() {
       category: "productive"
     },
     {
+      name: "Looka",
+      caption: "Create logos in minutes.",
+      image: LookaImg,
+      link: "https://looka.com/",
+      category: "creative"
+    },
+    {
+      name: "Namelix",
+      caption: "Generate names for your buisness.",
+      image: NamelixImg,
+      link: "https://namelix.com/",
+      category: "productive"
+    },
+    {
       name: "Kaiber",
       caption: "Create videos using AI.",
       image: KaiberImg,
@@ -108,7 +125,7 @@ export default function Home() {
   return (
     <div className='p-6 flex flex-col items-center'>
 
-      <h1 className={`header text-6xl my-6 ${poppins.className}`}>
+      <h1 className={`header text-6xl my-6 ${poppins.className}`} >
         AI Tools
       </h1>
 
@@ -116,9 +133,9 @@ export default function Home() {
       <Tabs defaultValue="all">
         <div className='w-full flex justify-center'>
           <TabsList >
-            <TabsTrigger value="all">All</TabsTrigger>
-            <TabsTrigger value="creative">Creative</TabsTrigger>
-            <TabsTrigger value="productive">Productive</TabsTrigger>
+            <TabsTrigger value="all" className={`text-xs font-light ${poppins.className}`}>All</TabsTrigger>
+            <TabsTrigger value="creative" className={`text-xs font-light ${poppins.className}`}>Creative</TabsTrigger>
+            <TabsTrigger value="productive" className={`text-xs font-light ${poppins.className}`}>Productive</TabsTrigger>
           </TabsList>
         </div>
         <TabsContent value="all" className='w-full'>
@@ -181,7 +198,7 @@ export default function Home() {
       </Tabs>
 
 
-
+      <Footer/>
     </div>
   )
 }
