@@ -19,7 +19,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs'
 import Footer from './footer'
 
 const inter = Inter({ subsets: ['latin'] })
-const poppins = Poppins({ subsets: ['latin'], weight: ['500','300'], })
+const poppins = Poppins({ subsets: ['latin'], weight: ['500','300','800'], })
 
 export type AiToolsDetails = {
   name: string,
@@ -125,8 +125,10 @@ export default function Home() {
   return (
     <div className='p-6 flex flex-col items-center'>
 
-      <h1 className={`header text-6xl my-6 ${poppins.className}`} >
-        AI Tools
+      <h1 className={`header text-2xl font-normal mt-8 mb-6 leading-[1.5]  ${poppins.className}
+                      md:text-4xl md:mt-12 md:mb-10
+                      xl:text-6xl xl:leading-[1.5]`}  >
+        Unleash the Power of AI <br/>With These Cutting-Edge Tools
       </h1>
 
 
