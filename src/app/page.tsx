@@ -123,7 +123,7 @@ export default function Home() {
   ]
 
   return (
-    <div className='p-6 flex flex-col items-center'>
+    <div className='p-2 flex flex-col items-center'>
 
       <h1 className={`header text-2xl font-normal mt-8 mb-6 leading-[1.5]  ${poppins.className}
                       md:text-4xl md:mt-12 md:mb-10
