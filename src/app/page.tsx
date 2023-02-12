@@ -271,8 +271,8 @@ export default function Home() {
         </TabsContent>
       </Tabs>
 
-
       <Footer/>
+      
     </div>
   )
 }
