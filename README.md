@@ -12,11 +12,11 @@ HODL MEET is a web-based platform that allows users to connect and communicate w
 
 ## Contributing 🤝
 
-    Contributions, issues and feature requests are welcome! 😍
+Contributions, issues and feature requests are welcome! 😍
 
 ## Show your support 😇
 
-    Give a 🌟 if this project helped you! ❤️
+Give a 🌟 if this project helped you! ❤️
 
 ## Technologies Used 🛠
 
