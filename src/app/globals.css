@@ -41,16 +41,11 @@ body {
   border-radius: 0.625rem;
   padding: 1rem;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  transition: .1s ease-in;
+  transition: 1.1s ease-in;
   cursor: pointer;
   background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
   backdrop-filter:  blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.18)
-}
 
-.project-card:hover{
-  /* position: relative; */
-  /* margin-top: -5px; */
-  transform: scale(1.02);
 }
