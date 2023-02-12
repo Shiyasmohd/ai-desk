@@ -8,7 +8,7 @@
   
 ![pika-1676165093491-1x](https://user-images.githubusercontent.com/83513144/218288654-86cf1eec-1aa1-4376-b4d5-e9e85e16d246.png)
 </div>
-✅ Live Preview: <a href="https://tools-ai.vercel.app/" target="_BLANK">Click Here</a>
+✅ Live Preview: <a href="https://tools-ai.vercel.app/" target="_blank">Click Here</a>
 
 ## Technologies Used 🛠
 
