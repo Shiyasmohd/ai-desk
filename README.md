@@ -10,6 +10,12 @@
 </div>
 ✅ Live Preview: <a href="https://tools-ai.vercel.app/" target="_BLANK">Click Here</a>
 
+## Technologies Used 🛠
+
+  • NextJS<br/>
+  • Typescript<br/>
+  • TailwindCSS<br/>
+  • Vercel
 
 ## Contributing 🤝
 
@@ -19,9 +25,3 @@ Contributions, issues and feature requests are welcome! 😍
 
 Give a 🌟 if this project helped you! ❤️
 
-## Technologies Used 🛠
-
-  • NextJS<br/>
-  • Typescript<br/>
-  • TailwindCSS<br/>
-  • Vercel
