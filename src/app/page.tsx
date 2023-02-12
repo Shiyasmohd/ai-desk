@@ -7,8 +7,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './Tabs'
 import Footer from './footer'
 import { aiTools, AiToolsDetails } from './aiList'
 import Navbar from './Navbar'
+import Section from './Animate'
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['500','300','800'], })
+const poppins = Poppins({ subsets: ['latin'], weight: ['500', '300', '800'], })
 
 export interface AiToolsCard extends AiToolsDetails {
   index: number
@@ -18,12 +19,17 @@ export default function Home() {
 
   return (
     <div className='p-2 flex flex-col items-center'>
-      <Navbar/>
+
+      <div className='w-full overflow-hidden'>
+        <Section duration='0.1s' translate='translateX(100px)' >
+          <Navbar />
+        </Section>
+      </div>
 
       <h1 className={`header text-2xl font-normal mt-8 mb-6 leading-[1.5]  ${poppins.className}
                       md:text-4xl md:mt-12 md:mb-10
                       xl:text-6xl xl:leading-[1.5]`}  >
-        Unleash the Power of AI <br/>With These Cutting-Edge Tools
+        Unleash the Power of AI <br />With These Cutting-Edge Tools
       </h1>
 
       <Tabs defaultValue="all">
@@ -54,11 +60,11 @@ export default function Home() {
           </div>
         </TabsContent>
         <TabsContent value="creative">
-        <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
+          <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
                       md:grid-cols-2 
                       lg:grid-cols-3'>
             {
-              aiTools.filter(item=>item.category=="creative").map((data: AiToolsDetails, index: number) => (
+              aiTools.filter(item => item.category == "creative").map((data: AiToolsDetails, index: number) => (
                 <Card
                   name={data.name}
                   link={data.link}
@@ -73,11 +79,11 @@ export default function Home() {
           </div>
         </TabsContent>
         <TabsContent value="productive">
-        <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
+          <div className='w-full gap-4 grid grid-cols-1 max-w-7xl
                       md:grid-cols-2 
                       lg:grid-cols-3'>
             {
-              aiTools.filter(item=>item.category=="productive").map((data: AiToolsDetails, index: number) => (
+              aiTools.filter(item => item.category == "productive").map((data: AiToolsDetails, index: number) => (
                 <Card
                   name={data.name}
                   link={data.link}
@@ -93,8 +99,8 @@ export default function Home() {
         </TabsContent>
       </Tabs>
 
-      <Footer/>
-      
+      <Footer />
+
     </div>
   )
 }

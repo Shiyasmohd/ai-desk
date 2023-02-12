@@ -11,8 +11,8 @@ export default function Card(props: AiToolsCard) {
 
 
     return (
-        <Section translate="translateY(10px)" duration={((props.index * 0.075   ) + 0.5).toString() + "s"}>
-            <div className="project-card border transition-all" >
+        <Section translate="translateY(10px)" duration={((props.index * 0.25   ) + 0.5).toString() + "s"}>
+            <div className="project-card transition-all" >
                 <Link href={props.link} target="_blank" >
 
                     {/* Image */}
