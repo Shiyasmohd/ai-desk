@@ -203,7 +203,6 @@ export default function Home() {
         Unleash the Power of AI <br/>With These Cutting-Edge Tools
       </h1>
 
-
       <Tabs defaultValue="all">
         <div className='w-full flex justify-center'>
           <TabsList >
