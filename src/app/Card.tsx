@@ -34,7 +34,7 @@ export default function Card(props: AiToolsCard) {
     };
 
     return (
-        <Section translate="translateY(10px)" duration={((props.index * 0.25) + 0.5).toString() + "s"}>
+        <Section translate="translateY(10px)" duration={((props.index * 0.075) + 0.5).toString() + "s"}>
             <Tilt options={options}>
 
                 <div className="project-card transition-all" >
