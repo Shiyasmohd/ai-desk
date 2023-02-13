@@ -19,6 +19,11 @@ import LalalImg from '../../public/lalal.png'
 import DurableImg from '../../public/durable.png'
 import QuillbotImg from '../../public/quillbot.png'
 import ElevenlabsImg from '../../public/elevenlabs.png'
+import VanceImg from '../../public/vance.png'
+import UizardImg from '../../public/uizard.png'
+import KhromaImg from '../../public/khroma.png'
+import FrontyImg from '../../public/fronty.png'
+import ResumeAIImg from '../../public/resumeai.png'
 
 export type AiToolsDetails = {
     name: string,
@@ -174,6 +179,41 @@ export const aiTools: AiToolsDetails[] = [
         caption: "AI-powered paraphrasing tool.",
         image: QuillbotImg,
         link: "https://quillbot.com/",
+        category: "productive"
+    },
+    {
+        name: "Resume AI",
+        caption: "Next generation intelligent resume builder.",
+        image: ResumeAIImg,
+        link: "https://www.resumai.com/",
+        category: "productive"
+    },
+    {
+        name: "Vance AI",
+        caption: "Image editing and manipulation.",
+        image: VanceImg,
+        link: "https://vanceai.com/",
+        category: "productive"
+    },
+    {
+        name: "Uizard",
+        caption: "Design stunning designs in minutes",
+        image: UizardImg,
+        link: "https://uizard.io/",
+        category: "productive"
+    },
+    {
+        name: "Khroma",
+        caption: "Creates limitless palettes",
+        image: KhromaImg,
+        link: "https://www.khroma.co/",
+        category: "productive"
+    },
+    {
+        name: "Fronty",
+        caption: "Image to HTML CSS converter",
+        image: FrontyImg,
+        link: "https://fronty.com/",
         category: "productive"
     },
 ]
