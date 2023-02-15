@@ -50,7 +50,7 @@ body {
 }
 
 /* Skeleton Loader */
-.css-1wkk1ks-skeletonStyles-Skeleton {
+.css-1wkk1ks-skeletonStyles-Skeleton,.css-k31kfd-skeletonStyles-Skeleton {
   background-color: #10171E !important;
   background-image: linear-gradient(270deg, #38444d1a, #15202B) !important;
 }
