@@ -38,25 +38,25 @@ export default function Card(props: AiToolsCard) {
             <Tilt options={options}>
 
                 <div className="project-card transition-all" >
-                    <Link href={props.link} target="_blank" >
+                    <Link href={props.link.stringValue} target="_blank" >
 
                         {/* Image */}
                         <div className="grid place-items-center rounded-md">
-                            <Image src={props.image} alt="" className="rounded-md" width={700} height={500} />
+                            <Image src={props.image.stringValue} alt="" className="rounded-md" width={700} height={500} />
                         </div>
 
                         {/* Name + Links */}
                         <div className="w-full
                             md:flex md:justify-between md:mb-1">
                             <h4 className={`my-2 text-white text-lg tracking-wide font-txt font-medium ${montserrat.className}`}>
-                                {props.name}
+                                {props.name.stringValue}
                             </h4>
                         </div>
 
 
                         {/* Tagline */}
                         <p className={`font-txt text-white mb-3 tracking-wide ${montserrat.className}`}>
-                            {props.caption}
+                            {props.caption.stringValue}
                         </p>
 
                     </Link>

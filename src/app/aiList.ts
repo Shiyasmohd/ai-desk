@@ -26,14 +26,14 @@ import FrontyImg from '../../public/fronty.png'
 import ResumeAIImg from '../../public/resumeai.png'
 
 export type AiToolsDetails = {
-    name: string,
-    caption: string,
-    image: any,
-    link: string,
-    category: "general" | "productive" | "creative"
+    name: { stringValue: string },
+    caption: { stringValue: string },
+    image: { stringValue: string },
+    link: { stringValue: string },
+    category: { stringValue : "general" | "productive" | "creative" }
 }
 
-export const aiTools: AiToolsDetails[] = [
+export const aiTools:any = [
     {
         name: "ChatGPT",
         caption: "Do anything you want !!!",

@@ -14,10 +14,10 @@ export default function Footer() {
                 © 2023 Shiyas Mohammed
             </div>
             <div className="flex justify-end gap-4">
-                <Link href="https://github.com/shiyasmohd/tools-ai" target="_blank" className="opacity-50 hover:opacity-75">
+                <Link href="https://github.com/shiyasmohd/tools-ai" target="_blank" className="opacity-50 hover:opacity-75 hover:scale-105 transition-all">
                     <Image src={Github} alt="Github" width={25} height={25} />
                 </Link>
-                <Link href="https://twitter.com/0xshiyasmohd" target="_blank" className="opacity-50 hover:opacity-75">
+                <Link href="https://twitter.com/0xshiyasmohd" target="_blank" className="opacity-50 hover:opacity-75 hover:scale-105 transition-all">
                     <Image src={Twitter} alt="Github" width={25} height={25} />
                 </Link>
             </div>

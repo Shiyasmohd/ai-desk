@@ -43,9 +43,14 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   transition: 1.1s ease-in;
   cursor: pointer;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
-  backdrop-filter:  blur(10px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 0, 0, 0.18)
+}
 
+/* Skeleton Loader */
+.css-1wkk1ks-skeletonStyles-Skeleton {
+  background-color: #10171E !important;
+  background-image: linear-gradient(270deg, #38444d1a, #15202B) !important;
 }
